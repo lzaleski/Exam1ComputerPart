@@ -1,8 +1,8 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   In this module, we are going to create a program that will help the user
-#   calculate how much they earned in week at work.
+#   calculate how much they earned in a week at work.
 #
 #   First, lets create a function that asks the user how many hours they
 #   worked on a particular day.
@@ -20,9 +20,10 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def get_hours(*day_of_week):
+    float(input(f"How many hours did you work on {day_of_week}? "))
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Now, write a function called calculate_hours() that takes 5 keyword
 #   arguments:
@@ -36,7 +37,9 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def calculate_hours(mon, tues, wed, thurs, fri):
+    result=float(mon) + float(tues) + float(wed) + float(thurs) + float(fri)
+    return result
 ###############################################################################
 # TODO: 3. (3 pts)
 #
@@ -56,7 +59,9 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def calculate_pay(total_hours, pay_rate):
+    total_pay = total_hours * pay_rate
+    return total_pay
 ###############################################################################
 # TODO: 4. (9 pts)
 #
