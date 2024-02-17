@@ -20,8 +20,9 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-def get_hours(*day_of_week):
-    float(input(f"How many hours did you work on {day_of_week}? "))
+def get_hours(day_of_week):
+    hours=float(input(f"How many hours did you work on {day_of_week}? "))
+    return hours
 ###############################################################################
 # DONE: 2. (3 pts)
 #
@@ -38,7 +39,7 @@ def get_hours(*day_of_week):
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 def calculate_hours(mon, tues, wed, thurs, fri):
-    result=float(mon) + float(tues) + float(wed) + float(thurs) + float(fri)
+    result=float(mon)+float(tues)+float(wed)+float(thurs)+float(fri)
     return result
 ###############################################################################
 # DONE: 3. (3 pts)
@@ -63,7 +64,7 @@ def calculate_pay(total_hours, pay_rate):
     total_pay = float(total_hours) * float(pay_rate)
     return total_pay
 ###############################################################################
-# TODO: 4. (9 pts)
+# DONE: 4. (9 pts)
 #
 #   Now, let's put it all together.
 #
