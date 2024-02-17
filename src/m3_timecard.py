@@ -41,7 +41,7 @@ def calculate_hours(mon, tues, wed, thurs, fri):
     result=float(mon) + float(tues) + float(wed) + float(thurs) + float(fri)
     return result
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Next, write a function called calculate_pay() that takes two parameters:
 #       - total_hours   <-- float
@@ -60,7 +60,7 @@ def calculate_hours(mon, tues, wed, thurs, fri):
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 def calculate_pay(total_hours, pay_rate):
-    total_pay = total_hours * pay_rate
+    total_pay = float(total_hours) * float(pay_rate)
     return total_pay
 ###############################################################################
 # TODO: 4. (9 pts)
@@ -108,3 +108,22 @@ def calculate_pay(total_hours, pay_rate):
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    print("Let's calculate your pay!")
+    monday1=get_hours("monday")
+    tuesday1=get_hours("tuesday")
+    wednesday1=get_hours("wednesday")
+    thursday1=get_hours("thursday")
+    friday1=get_hours("friday")
+    hours_worked=calculate_hours(monday1,tuesday1,wednesday1,thursday1,friday1)
+    hourly_wage=float(input("How much are you currently paid per hour? "))
+    money=calculate_pay(hours_worked,hourly_wage)
+    print(f"Monday: {monday1} hour(s)")
+    print(f"Tuesday: {tuesday1} hour(s)")
+    print(f"Wednesday: {wednesday1} hour(s)")
+    print(f"Thursday: {thursday1} hour(s)")
+    print(f"Friday: {friday1} hour(s)")
+    print(f"Pay Rate: ${hourly_wage}")
+    print(f"Total Pay: ${money}")
+
+main()
